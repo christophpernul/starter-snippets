@@ -86,6 +86,30 @@ body = html.Div([
                             dbc.Col(html.Div(dbc.Alert("Column 3")), lg=4, md=6, xs=12)
                         ],
                         justify='around'
+                    ),
+                    html.H2("One Row with two columns of different heights:"),
+                    dbc.Row(
+                        [
+                            dbc.Col(html.Div([html.Div("Text"),html.Br(), html.Div("Text"),
+                                              html.Br(), html.Div("Text"),html.Br(), html.Div("Text"),
+                                              html.Br(), html.Div("Text"),html.Br(), html.Div("Text")]), width=6),
+                            dbc.Col([
+                                    dbc.Row([
+                                        dbc.Col(html.Div([html.Div("Text"),html.Br(), html.Div("Text"),
+                                                            html.Br(), html.Div("Text"),html.Br(), html.Div("Text")
+                                                          ])
+                                            , width=6),
+                                        dbc.Col(html.Div(dbc.Alert("Column 2")), width=6)
+                                    ]),
+                                    dbc.Row([
+                                        dbc.Col(html.Div(dbc.Alert("Column 1")), width=6),
+                                        dbc.Col(html.Div(dbc.Alert("Column 2")), width=6)
+                                    ])
+                                ],
+                                width=6
+                            )
+                        ],
+                        justify='start'
                     )
                 ]
             )
